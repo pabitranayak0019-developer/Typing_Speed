@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f1220;
+  color: #eaeaf0;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 16px;
+}
+
+.card {
+  background: #171a2e;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stats {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+}
+
+#themeToggle {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.time-select {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.time-btn {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #2a2f55;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.time-btn.active {
+  background: #5c7cfa;
+  border-color: #5c7cfa;
+  color: #fff;
+}
+
+.text-area {
+  position: relative;
+  margin-top: 14px;
+  background: #0f1220;
+  padding: 16px;
+  border-radius: 10px;
+  min-height: 130px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.text-area span.correct {
+  color: #4cd964;
+}
+
+.text-area span.incorrect {
+  color: #ff4d4d;
+}
+
+/* Smooth animated caret */
+#caret {
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  background: #5c7cfa;
+  pointer-events: none;
+  animation: blink 1s infinite;
+
+  transition:
+    top 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    left 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+textarea {
+  width: 100%;
+  margin-top: 14px;
+  height: 90px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  background: #0f1220;
+  border: 1px solid #2a2f55;
+  color: #fff;
+  resize: none;
+  outline: none;
+}
+
+button#start {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #5c7cfa;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Light mode */
+body.light {
+  background: #f2f4f8;
+  color: #222;
+}
+
+body.light .card {
+  background: #fff;
+}
+
+body.light .text-area,
+body.light textarea {
+  background: #f7f9fc;
+  color: #222;
+}
+
+body.light #caret {
+  background: #4a90e2;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 720px;
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typing Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<div class="wrapper">
+  <div class="card">
+
+    <div class="top-bar">
+      <div class="stats">
+        <div><span id="time">15</span>s</div>
+        <div><span id="wpm">0</span> WPM</div>
+        <div><span id="accuracy">0</span>%</div>
+        <div>Mistakes: <span id="mistakes">0</span></div>
+      </div>
+      <button id="themeToggle">🌙</button>
+    </div>
+
+    <div class="time-select">
+      <button class="time-btn active" data-time="15">15s</button>
+      <button class="time-btn" data-time="30">30s</button>
+      <button class="time-btn" data-time="60">60s</button>
+    </div>
+
+    <div class="text-area" id="textDisplay">
+      <div id="caret"></div>
+    </div>
+
+    <textarea id="input" placeholder="Start typing..." disabled></textarea>
+
+    <button id="start">Start Test</button>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
